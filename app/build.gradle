@@ -35,9 +35,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':lib_permission')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.squareup.okhttp3:okhttp:3.14.+'
+    // 使用 Android X , 需要导入 3.0.0 的版本
+    implementation 'pub.devrel:easypermissions:3.0.0'
 }
