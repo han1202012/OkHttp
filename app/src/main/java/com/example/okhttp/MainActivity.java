@@ -241,8 +241,8 @@ public class MainActivity extends AppCompatActivity {
                 .permission(
                         // 申请 SD 卡权限
                         Permission.WRITE_EXTERNAL_STORAGE,
-                        Permission.READ_EXTERNAL_STORAGE)
-                .onGranted(new Action<List<String>>() {
+                        Permission.READ_EXTERNAL_STORAGE
+                ).onGranted(new Action<List<String>>() {
                     @Override
                     public void onAction(List<String> data) {
                         // 所有权限都通过
@@ -252,14 +252,12 @@ public class MainActivity extends AppCompatActivity {
                                 android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                         startActivityForResult(intent, REQUEST_CODE);
                     }
-                })
-                .onDenied(new Action<List<String>>() {
+                }).onDenied(new Action<List<String>>() {
                     @Override
                     public void onAction(List<String> data) {
                         // 存在至少 1 个权限被拒绝
                     }
-                })
-                .start();
+                }).start();
     }
 
     /**
