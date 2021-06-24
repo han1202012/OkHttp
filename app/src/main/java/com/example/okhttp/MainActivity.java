@@ -19,6 +19,7 @@ import com.yanzhenjie.permission.runtime.Permission;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.util.List;
 
 import okhttp3.Call;
